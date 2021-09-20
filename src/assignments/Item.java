@@ -25,12 +25,13 @@ public class Item {
 
 	public static void main(String[] args) {
 		
-		int moneyAtHand = 20;
+		int moneyInHand = 20;
 		//int totalCost = 0;
 		HashMap<String,Integer> productDetails = new HashMap<String,Integer>();
 		
 		System.out.println("Welcome to the billing section");
 		System.out.println("Enter number of items:");
+		
 		Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
 		
 		int noOfItems = sc.nextInt();
@@ -49,11 +50,9 @@ public class Item {
 		
 		
 		}
-//		System.out.println("Itemname:" + itemName);
-//		System.out.println("Cost: " + cost);
-//		System.out.println("Change: " + change);
+
 		
-		int change = moneyAtHand - totalcost;
+		int change = moneyInHand - totalcost;
 		
 		System.out.println("Purchased product details:");
 		for(String product :productDetails.keySet()) {
