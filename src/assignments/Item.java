@@ -10,13 +10,17 @@ public class Item {
 	private int cost;
 	private String ItemName;
 	private String Category;
-
+	static HashMap<String,Integer> productDetails = new HashMap<String,Integer>();
+	
 	public Item(int cost, String ItemName) {
 		this.ItemName = ItemName;
 	}
 	
     static int demo(String itemName, int cost) {
 		Item i = new Item(cost,itemName);
+		productDetails.put(itemName, cost);
+		
+		
 		return totalcost = totalcost + cost;
     	
 	}
@@ -26,8 +30,7 @@ public class Item {
 	public static void main(String[] args) {
 		
 		int moneyInHand = 20;
-		//int totalCost = 0;
-		HashMap<String,Integer> productDetails = new HashMap<String,Integer>();
+		
 		
 		System.out.println("Welcome to the billing section");
 		System.out.println("Enter number of items:");
@@ -44,7 +47,6 @@ public class Item {
 		System.out.println("Enter Cost: ");
 		int cost = sc.nextInt();
 		
-		productDetails.put(itemName, cost);
 		
 		totalcost = demo(itemName,cost);
 		
